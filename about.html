@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Salvium Protocol</title>
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#40E0D0">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#1e1e1e">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#1e1e1e">
+    
+    <!-- Fonts and Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/cards.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            /* Primary Colors */
+            --color-primary: #00bfa5;
+            --color-primary-dark: #009688;
+
+            /* Background Colors */
+            --color-bg-dark: #1e1e1e;
+            --color-bg-darker: rgba(30, 30, 30, 0.95);
+            --color-bg-header: rgba(30, 30, 30, 0.95);
+
+            /* Text Colors */
+            --color-text: #e0e0e0;
+            --color-text-light: rgba(224, 224, 224, 0.7);
+            --color-text-lighter: rgba(224, 224, 224, 0.5);
+
+            /* Accent Colors */
+            --color-accent: #4db6ac;
+            --color-accent-light: #80cbc4;
+
+            /* Border Colors */
+            --color-border: rgba(0, 191, 165, 0.15);
+            --color-border-light: rgba(0, 191, 165, 0.05);
+
+            /* Border Radius */
+            --radius-sm: 2px;
+            --radius-md: 4px;
+            --radius-lg: 4px;
+
+            /* Font */
+            --font-primary: 'Josefin Sans', sans-serif;
+        }
+
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            padding-top: 30px;
+            font-family: var(--font-primary);
+            background-color: var(--color-bg-dark);
+            color: var(--color-text);
+            line-height: 1.6;
+            position: relative;
+        }
+
+        /* Navigation styles */
+        .nav-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: linear-gradient(to bottom, rgb(30 30 30 / 19%), rgb(30 30 30 / 61%));
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(0, 191, 165, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .nav-scrolled {
+            background: linear-gradient(to bottom, rgb(30 30 30 / 40%), rgb(30 30 30 / 80%));
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to bottom, rgb(30 30 30 / 90%), rgb(30 30 30 / 95%));
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        /* Card Styles */
+        .feature-card {
+            background: linear-gradient(to bottom, rgba(40, 40, 40, 0.95), rgba(30, 30, 30, 0.98));
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .card-tag {
+            background: rgba(0, 191, 165, 0.1);
+            color: var(--color-primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.875rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .btn {
+            border-radius: var(--radius-md);
+        }
+
+        /* Global title styles */
+        h1, h2, h3, .title-font {
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        
+        .card-title {
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 600;
+        }
+
+        .section-title {
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Feature cards grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .feature-grid {
+                gap: 1rem;
+            }
+        }
+
+        /* Additional spacing for about page */
+        .content-spacing {
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+
+<body class="bg-[#1e1e1e]">
+    <!-- Particles Container -->
+    <div id="particles" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <!-- Header will be injected here -->
+    <div id="header"></div>
+
+    <main class="relative z-10">
+        <!-- Hero Section -->
+        <section class="relative">
+            <!-- Hero Image -->
+            <div class="absolute inset-0">
+                <img src="images/newimages/About.png" alt="About Salvium" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-75"></div>
+            </div>
+            <div class="relative z-10 py-24 lg:py-32">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-4xl mx-auto text-center">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                            About <span class="gradient-text">Salvium</span>
+                        </h1>
+                        <p class="text-xl text-gray-300 mb-8">
+                            Discover the future of decentralized finance
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <div class="container mx-auto px-4 py-16 content-spacing">
+            <!-- Introduction Section -->
+            <div class="max-w-4xl mx-auto mb-24">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="card-content">
+                        <span class="card-tag">Overview</span>
+                        <h2 class="text-3xl font-bold mb-6 text-white">Introducing Salvium</h2>
+                        <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                            Salvium is a cutting-edge proof-of-work private blockchain that seamlessly combines staking, enhanced privacy and DeFi capabilities while navigating crypto regulations. Built on a fork of Monero, it retains Monero's advanced privacy features such as stealth addresses and ring signatures.
+                        </p>
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            However, Salvium introduces groundbreaking innovations that significantly alter transaction mechanics, creating a unique solution in the DeFi space.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- History Section -->
+            <div class="max-w-4xl mx-auto mb-24">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-content">
+                        <span class="card-tag">History</span>
+                        <h2 class="text-3xl font-bold mb-6 text-white">Our Journey</h2>
+                        <div class="space-y-6">
+                            <p class="text-gray-300 text-lg leading-relaxed">
+                                Salvium originated as a research initiative to explore Cryptonote's potential for private DeFi. Through extensive research, prototyping, and revisiting established Monero studies, our team focused on enhancing scalability, extensibility, and multi-chain interoperability.
+                            </p>
+                            <p class="text-gray-300 text-lg leading-relaxed">
+                                Taking a 'privacy-first' approach, Salvium is designed to meet full MiCA compliance. At launch, we will introduce phase one compliance features, such as refundable payments and a specialized 'exchange mode' for supporting these refunds.
+                            </p>
+                            <p class="text-gray-300 text-lg leading-relaxed">
+                                Over the past year, we've also developed features like Conditional Payments (CP), native yield, and staking, with some available at launch and others planned for future updates.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Innovations Section -->
+            <div class="max-w-6xl mx-auto mb-24">
+                <h2 class="text-3xl font-bold mb-8 text-center text-white">Key Innovations</h2>
+                <div class="feature-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-content">
+                            <span class="card-tag">Privacy</span>
+                            <h3 class="text-xl font-bold mb-4 text-white">Compliant Privacy</h3>
+                            <p class="text-gray-300">
+                                Designed with MiCA regulations in mind, Salvium offers refundable transactions and exchange modes, balancing privacy with regulatory requirements.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-content">
+                            <span class="card-tag">Technology</span>
+                            <h3 class="text-xl font-bold mb-4 text-white">Native Staking</h3>
+                            <p class="text-gray-300">
+                                First CryptoNote-based chain to offer native staking, revolutionizing the way privacy coins handle consensus and rewards.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="card-content">
+                            <span class="card-tag">Features</span>
+                            <h3 class="text-xl font-bold mb-4 text-white">Advanced DeFi</h3>
+                            <p class="text-gray-300">
+                                Introducing Conditional Payments and native yield features, creating new possibilities for private DeFi applications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Specifications -->
+            <div class="max-w-4xl mx-auto mb-24">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card-content">
+                        <span class="card-tag">Technical</span>
+                        <h2 class="text-3xl font-bold mb-6 text-white">Technical Specifications</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="text-xl font-bold mb-4 text-white">Mining</h3>
+                                <ul class="space-y-3 text-gray-300">
+                                    <li>• Algorithm: RandomX</li>
+                                    <li>• Block Time: 120 seconds</li>
+                                    <li>• Block Reward: 123.825 SAL</li>
+                                    <li>• Dynamic Difficulty Adjustment</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-4 text-white">Staking</h3>
+                                <ul class="space-y-3 text-gray-300">
+                                    <li>• 20% of Block Rewards</li>
+                                    <li>• No Minimum Lock Period</li>
+                                    <li>• Flexible Staking Options</li>
+                                    <li>• Instant Unstaking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pre-mine Distribution -->
+            <div class="max-w-4xl mx-auto mb-24">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="card-content">
+                        <span class="card-tag">Distribution</span>
+                        <h2 class="text-3xl font-bold mb-6 text-white">Pre-mine Distribution</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <div class="mb-6">
+                                    <h3 class="text-xl font-bold mb-3 text-white">Development Fund (40%)</h3>
+                                    <p class="text-gray-300">Allocated for ongoing development, security audits, and technical improvements.</p>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-3 text-white">Marketing Fund (20%)</h3>
+                                    <p class="text-gray-300">Reserved for marketing initiatives, community growth, and awareness campaigns.</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mb-6">
+                                    <h3 class="text-xl font-bold mb-3 text-white">Community Fund (30%)</h3>
+                                    <p class="text-gray-300">Dedicated to community rewards, ecosystem growth, and governance initiatives.</p>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-3 text-white">Team Fund (10%)</h3>
+                                    <p class="text-gray-300">Allocated for team compensation and operational expenses.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Section -->
+            <div class="max-w-4xl mx-auto">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="card-content">
+                        <span class="card-tag">Security</span>
+                        <h2 class="text-3xl font-bold mb-6 text-white">Security & Compliance</h2>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="text-primary mr-3">•</span>
+                                <span>Privacy as a Right: Champion ethical usage while ensuring regulatory compliance</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary mr-3">•</span>
+                                <span>DeFi Evolution: Lay the groundwork for truly private decentralized finance</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary mr-3">•</span>
+                                <span>Selective Transparency: Users control their privacy level, crucial for exchange compliance</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary mr-3">•</span>
+                                <span>Future-Proof: Proactively designed with upcoming regulations in mind</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CTA Section -->
+        <section class="py-16 relative overflow-hidden bg-[#0B272C] mt-8">
+            <!-- Background Decoration -->
+            <div class="absolute inset-0">
+                <img src="./images/pools.png" alt="" class="absolute w-full h-full object-cover opacity-20">
+                <div class="absolute inset-0 bg-gradient-to-b from-[#0B272C]/95 via-[#0B272C]/80 to-[#0B272C]/95"></div>
+            </div>
+            
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <h2 class="text-4xl md:text-5xl font-bold mb-8" data-aos="fade-up">
+                    Ready to Take the <span class="gradient-text">Pill</span>?
+                </h2>
+                <p class="text-xl text-white/80 mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    Start your journey with Salvium today and be part of the next generation of Private DeFi.
+                </p>
+                <button class="btn-primary px-12 py-4 text-lg font-semibold hover:opacity-90 transition-opacity" data-aos="fade-up" data-aos-delay="200">
+                    Get Started Now
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be injected here -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+</body>
+</html>
