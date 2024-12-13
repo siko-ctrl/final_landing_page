@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salvium Protocol Audit - A Milestone in Innovation and Security | Salvium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/design-system.css">
+    
+    <style>
+        :root {
+            --color-primary: #00bfa5;
+            --color-primary-dark: #009688;
+            --color-bg-dark: #1e1e1e;
+            --color-bg-darker: rgba(30, 30, 30, 0.95);
+            --color-text: #e0e0e0;
+            --font-primary: 'Josefin Sans', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background-color: var(--color-bg-dark);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        .blog-header {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .blog-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(30, 30, 30, 0.5);
+        }
+
+        .blog-title-container {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .blog-title-container h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+        }
+
+        .blog-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .blog-content h2, .blog-content h3, .blog-content h4 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin: 2rem 0 1rem;
+        }
+
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+        }
+
+        .blog-content a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .blog-content a:hover {
+            color: var(--color-primary-dark);
+        }
+
+        .blog-content ul, .blog-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .blog-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .back-to-blog {
+            display: inline-block;
+            margin: 2rem 0;
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .back-to-blog:hover {
+            color: var(--color-primary-dark);
+        }
+
+        @media (max-width: 768px) {
+            .blog-header {
+                height: 40vh;
+            }
+
+            .blog-title-container h1 {
+                font-size: 2rem;
+            }
+
+            .blog-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header will be injected here -->
+    <div id="header"></div>
+
+    <!-- Blog Header -->
+    <header class="blog-header" style="background-image: url('../images/newimages/Blog Page/Blog Thumbs - No Text/Blog - No Text.jpg');">
+        <div class="blog-title-container">
+            <h1>Salvium Protocol Audit - A Milestone in Innovation and Security</h1>
+            <div class="blog-meta">
+                <span>January 4, 2024</span>
+                <span>6 min read</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Content -->
+    <main class="blog-content">
+        <p>We are excited to announce the successful completion of a comprehensive audit of the Salvium protocol by Cypher Stack, a team of experts with experience in Monero protocol research and development. This audit represents a significant milestone in Salvium's development, providing robust validation of our core innovations and setting the stage for our next phase of growth.</p>
+
+        <h3>Scope of the Audit</h3>
+        <p>Cypher Stack conducted an in-depth review of two key Salvium innovations:</p>
+        <ol>
+            <li>Return Functionality: Our approach to enabling compliant refunds while maintaining privacy.</li>
+            <li>Expanded Transaction Types: Including burn, convert, yield, and protocol transactions that go beyond simple transfers.</li>
+        </ol>
+        <p>The audit involved a thorough examination of the mathematical foundations, logical structure, and security implications of these features. Note that the scope of the audit by Cypher Stack did not include any consideration of legal appropriateness or status of the design, only the technical applicability and functionality.</p>
+
+        <h3>Key Findings</h3>
+        <p>We are pleased to report that Cypher Stack's analysis did not identify any critical issues with the overall approach adopted by Salvium, although they did identify important findings relating to consensus rules and wallet behaviour that require careful consideration. Specifically, they found:</p>
+        <ol>
+            <li>Return Functionality: The auditors confirmed that our design "meets the informal design requirements" and successfully achieves its goals. They verified that the protocol allows for refunds while preserving transaction privacy and unlinkability to similar levels as those found in Monero.</li>
+            <li>Expanded Transaction Types: Cypher Stack validated that our approach "appears to meet its goals" of enabling more complex financial operations within the privacy-preserving framework (whilst bearing in mind the aforementioned important findings).</li>
+            <li>Security Model: The auditors noted that our protocol extensions maintain the strong security properties inherited from Monero, while adding new capabilities.</li>
+        </ol>
+
+        <h3>Recommendations and Optimisations</h3>
+        <p>Cypher Stack provided valuable insights for further enhancing Salvium:</p>
+        <ol>
+            <li>Efficiency Improvements: They suggested a simplified construction for additional data in convert/yield transactions, which we plan to implement in our next update.</li>
+            <li>Risk Mitigation: The audit highlighted potential risks related to output key reuse across different transaction types. We will be implementing additional safeguards as recommended.</li>
+            <li>Subaddress Handling: Cypher Stack proposed optimisations for subaddress management, which will improve performance in future releases.</li>
+        </ol>
+
+        <h3>Next Steps</h3>
+        <p>We are already working on incorporating Cypher Stack's recommendations:</p>
+        <ol>
+            <li>Protocol Considerations: Our development team is reviewing the suggested efficiency improvements and risk mitigations for potential inclusion in future updates.</li>
+            <li>Extended Testing: We will be conducting extensive testing of the optimised protocol to ensure seamless integration of the new features.</li>
+            <li>Documentation: We're enhancing our technical documentation to reflect the audited protocol design and upcoming changes.</li>
+        </ol>
+
+        <h3>Conclusion</h3>
+        <p>This audit by Cypher Stack marks a crucial step in Salvium's journey. It provides strong validation of our innovative approach to privacy-preserving, compliant blockchain technology. While there is always more work to be done in the evolving landscape of cryptocurrency, we are confident that Salvium is on the right path.</p>
+        
+        <p>We extend our sincere thanks to the Cypher Stack team for their rigorous analysis and constructive feedback. Their expertise has been invaluable in refining and strengthening the Salvium protocol.</p>
+        
+        <p>We encourage our community to review the full audit report, which we've made publicly available in the spirit of transparency. As always, we welcome your questions, feedback, and continued support as we work together to build the future of private, compliant blockchain technology.</p>
+    </main>
+
+    <!-- Footer will be injected here -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
+        });
+    </script>
+    <script src="../js/header.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/blog-navigation.js"></script>
+</body>
+</html>

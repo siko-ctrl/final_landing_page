@@ -1,0 +1,15 @@
+{
+  "name": "salvium-landing-page",
+  "version": "1.0.0",
+  "description": "Salvium DeFi Landing Page",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3",
+    "@popperjs/core": "^2.11.8",
+    "tippy.js": "^6.3.7",
+    "aos": "^2.3.4"
+  }
+}

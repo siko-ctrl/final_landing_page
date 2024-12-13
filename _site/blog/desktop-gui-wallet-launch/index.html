@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salvium 0.5.0 Launch - Including Desktop GUI Wallet - Salvium Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/design-system.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --color-primary: #00bfa5;
+            --color-primary-dark: #009688;
+            --color-bg-dark: #1e1e1e;
+            --color-bg-darker: rgba(30, 30, 30, 0.95);
+            --color-text: #e0e0e0;
+            --font-primary: 'Josefin Sans', sans-serif;
+            --radius-sm: 2px;
+            --radius-md: 4px;
+            --radius-lg: 4px;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background-color: var(--color-bg-dark);
+            color: var(--color-text);
+            padding-top: 30px;
+        }
+
+        .blog-card {
+            background: linear-gradient(to bottom, rgba(40, 40, 40, 0.95), rgba(30, 30, 30, 0.98));
+            border: 1px solid rgba(0, 191, 165, 0.1);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 191, 165, 0.1);
+            border-color: rgba(0, 191, 165, 0.3);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-tag {
+            background: rgba(0, 191, 165, 0.1);
+            color: var(--color-primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.875rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-description {
+            font-family: var(--font-primary);
+            font-weight: 400;
+            color: rgba(224, 224, 224, 0.8);
+        }
+
+        .card-title {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #e0e0e0;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        /* Blog grid */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .post-content {
+            font-family: var(--font-primary);
+            color: rgba(224, 224, 224, 0.8);
+            line-height: 1.7;
+        }
+
+        .post-content h1, .post-content h2, .post-content h3 {
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 600;
+            color: #e0e0e0;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .post-content p {
+            margin-bottom: 1rem;
+        }
+
+        .post-content ul, .post-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .post-content li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-[#1e1e1e]">
+    <!-- Particles Container -->
+    <div id="particles" class="fixed inset-0 pointer-events-none z-0"></div>
+    
+    <!-- Header will be injected here -->
+    <div id="header"></div>
+
+    <main class="relative z-10">
+        <!-- Hero Section -->
+        <section class="relative bg-[#1e1e1e] overflow-hidden">
+            <div class="absolute inset-0">
+                
+                <img src="/images/blog/blog 0.5.0 rls.jpg" alt="Salvium 0.5.0 Launch - Including Desktop GUI Wallet" class="w-full h-full object-cover opacity-50">
+                
+                <div class="absolute inset-0 bg-gradient-to-b from-[#1e1e1e]/80 to-[#1e1e1e]"></div>
+            </div>
+            <div class="relative z-10 py-24 lg:py-32">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-4xl mx-auto text-center">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                            Salvium 0.5.0 Launch - Including Desktop GUI Wallet
+                        </h1>
+                        <p class="text-xl text-gray-300 mb-8">
+                            January 03, 2024 • Salvium Team
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container mx-auto px-4 -mt-8">
+            <div class="blog-grid mt-16">
+                <div class="blog-card" data-aos="fade-up">
+                    <img src="/images/blog/blog 0.5.0 rls.jpg" alt="Salvium 0.5.0 Launch - Including Desktop GUI Wallet" class="blog-image">
+                    <div class="p-6">
+                        <span class="blog-tag">Technology</span>
+                        <h2 class="card-title text-xl mt-4 mb-2 text-white">Salvium 0.5.0 Launch - Including Desktop GUI Wallet</h2>
+                        <p class="blog-description mb-4">Introducing Salvium 0.5.0, featuring our new Desktop GUI Wallet and significant protocol improvements.</p>
+                        <div class="post-content mt-6">
+                            <p>We are thrilled to announce the release of Salvium 0.5.0, marking a significant milestone in our journey. This release introduces our highly anticipated Desktop GUI Wallet alongside substantial protocol improvements that enhance both functionality and user experience.</p>
+
+<h2 id="desktop-gui-wallet-features">Desktop GUI Wallet Features</h2>
+
+<p>The new Desktop GUI Wallet represents a major step forward in making Salvium more accessible to users of all technical backgrounds. Key features include:</p>
+
+<ul>
+  <li><strong>Modern Interface</strong>: Clean, intuitive design for easy navigation</li>
+  <li><strong>Secure Storage</strong>: Advanced encryption for private keys</li>
+  <li><strong>Transaction Management</strong>: Detailed history with filtering capabilities</li>
+  <li><strong>Contact Management</strong>: Streamlined address book functionality</li>
+  <li><strong>Network Sync</strong>: Real-time blockchain synchronization</li>
+</ul>
+
+<h2 id="protocol-improvements">Protocol Improvements</h2>
+
+<p>Version 0.5.0 brings several significant protocol improvements:</p>
+
+<h3 id="transaction-processing">Transaction Processing</h3>
+<ul>
+  <li><strong>Faster Confirmations</strong>: Reduced transaction confirmation times</li>
+  <li><strong>Better Scalability</strong>: Improved transaction throughput</li>
+  <li><strong>Optimized Memory</strong>: Reduced resource consumption</li>
+</ul>
+
+<h3 id="security-updates">Security Updates</h3>
+<ul>
+  <li><strong>Cryptographic Upgrades</strong>: Latest security libraries</li>
+  <li><strong>Enhanced Protection</strong>: Additional security layers</li>
+  <li><strong>Network Resilience</strong>: Improved stability measures</li>
+</ul>
+
+<h3 id="network-optimization">Network Optimization</h3>
+<ul>
+  <li><strong>Peer Discovery</strong>: Enhanced node finding</li>
+  <li><strong>Bandwidth Usage</strong>: Optimized data transfer</li>
+  <li><strong>Connection Stability</strong>: More reliable networking</li>
+</ul>
+
+<h2 id="installation-guide">Installation Guide</h2>
+
+<p>Getting started with the new Desktop GUI Wallet is straightforward:</p>
+
+<ol>
+  <li><strong>Download</strong>
+    <ul>
+      <li>Visit our official website</li>
+      <li>Select your operating system</li>
+      <li>Download the installer package</li>
+    </ul>
+  </li>
+  <li><strong>Verify Security</strong>
+    <ul>
+      <li>Check the download checksum</li>
+      <li>Verify the signature</li>
+      <li>Ensure file integrity</li>
+    </ul>
+  </li>
+  <li><strong>Setup Process</strong>
+    <ul>
+      <li>Run the installer</li>
+      <li>Follow the setup wizard</li>
+      <li>Configure your preferences</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="developer-resources">Developer Resources</h2>
+
+<p>The 0.5.0 release includes several developer-focused improvements:</p>
+
+<ul>
+  <li><strong>API Updates</strong>: Comprehensive documentation</li>
+  <li><strong>RPC Enhancement</strong>: New command options</li>
+  <li><strong>Testing Tools</strong>: Improved framework</li>
+  <li><strong>Debug Support</strong>: Enhanced debugging capabilities</li>
+</ul>
+
+<h2 id="future-development">Future Development</h2>
+
+<p>This release sets the foundation for future improvements:</p>
+
+<h3 id="wallet-enhancements">Wallet Enhancements</h3>
+<ul>
+  <li><strong>Feature Expansion</strong>: Additional functionality</li>
+  <li><strong>Mobile Development</strong>: iOS and Android apps</li>
+  <li><strong>Integration Options</strong>: Third-party support</li>
+</ul>
+
+<h3 id="protocol-updates">Protocol Updates</h3>
+<ul>
+  <li><strong>Optimization</strong>: Performance improvements</li>
+  <li><strong>Privacy Features</strong>: Enhanced security measures</li>
+  <li><strong>Network Upgrades</strong>: Scaling solutions</li>
+</ul>
+
+<h2 id="community-engagement">Community Engagement</h2>
+
+<p>We value our community’s input and have incorporated many suggested features in this release:</p>
+
+<ul>
+  <li><strong>Feature Requests</strong>: Community-driven development</li>
+  <li><strong>Feedback Channels</strong>: Multiple communication options</li>
+  <li><strong>Support Resources</strong>: Comprehensive help system</li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Salvium 0.5.0 represents a major step forward in our mission to make privacy-focused cryptocurrency accessible to everyone. Download the new Desktop GUI Wallet and experience the future of private transactions.</p>
+
+<p>Stay tuned for more updates and thank you for being part of the Salvium community!</p>
+
+                        </div>
+                        <a href="/blogs.html" class="blog-link mt-4">
+                            Back to Blog
+                            <i class="fa-solid fa-angle-left"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be injected here -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out',
+            once: true
+        });
+    </script>
+    <script src="/js/load-components.js"></script>
+    <script src="/js/particles.js"></script>
+</body>
+</html>
