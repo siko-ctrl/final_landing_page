@@ -152,7 +152,7 @@ body, p, a, span, div, button, .btn, .text-primary, .text-secondary, .list-style
 
 .btn-primary {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-    color: var(--background);
+    color: white !important;
 }
 
 .btn-secondary {
