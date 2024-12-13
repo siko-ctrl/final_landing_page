@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="hidden md:flex items-center space-x-8">
                     <!-- Get Started Dropdown -->
                     <div class="relative dropdown-container font-body">
-                        <button class="flex items-center dropdown-button" style="color: #40E0D0">
+                        <button class="flex items-center dropdown-button font-josefin" style="color: #40E0D0">
                             Get Started
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -24,17 +24,17 @@ document.addEventListener('DOMContentLoaded', function() {
                         </button>
                         <div class="dropdown-menu absolute left-0 mt-2 w-48 rounded-lg shadow-xl hidden" style="background: rgba(30, 30, 30, 0.98);">
                             <div class="py-1">
-                                <a href="${pathPrefix}exchanges.html" class="block px-4 py-2 transition-all duration-200" style="color: #40E0D0">Exchanges</a>
-                                <a href="${pathPrefix}about.html" class="block px-4 py-2 transition-all duration-200" style="color: #40E0D0">About</a>
-                                <a href="${pathPrefix}papers.html" class="block px-4 py-2 transition-all duration-200" style="color: #40E0D0">Lite Paper</a>
-                                <a href="${pathPrefix}download.html" class="block px-4 py-2 transition-all duration-200" style="color: #40E0D0">Downloads</a>
+                                <a href="${pathPrefix}exchanges.html" class="block px-4 py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Exchanges</a>
+                                <a href="${pathPrefix}about.html" class="block px-4 py-2 transition-all duration-200 font-arial" style="color: #40E0D0">About</a>
+                                <a href="${pathPrefix}papers.html" class="block px-4 py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Lite Paper</a>
+                                <a href="${pathPrefix}download.html" class="block px-4 py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Downloads</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Knowledge Dropdown -->
                     <div class="relative dropdown-container font-body">
-                        <button class="flex items-center dropdown-button" style="color: #40E0D0">
+                        <button class="flex items-center dropdown-button font-josefin" style="color: #40E0D0">
                             Knowledge
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -42,16 +42,16 @@ document.addEventListener('DOMContentLoaded', function() {
                         </button>
                         <div class="dropdown-menu absolute left-0 mt-2 w-48 rounded-lg shadow-xl hidden" style="background: rgba(30, 30, 30, 0.98);">
                             <div class="py-1">
-                                <a href="${pathPrefix}faq.html" class="block px-4 py-2 transition-all duration-200" style="color: #40E0D0">FAQ</a>
-                                <a href="${pathPrefix}knowledge-base.html" class="block px-4 py-2 transition-all duration-200" style="color: #40E0D0">Knowledge Base</a>
-                                <a href="${pathPrefix}blogs.html" class="block px-4 py-2 transition-all duration-200" style="color: #40E0D0">Blog</a>
+                                <a href="${pathPrefix}faq.html" class="block px-4 py-2 transition-all duration-200 font-arial" style="color: #40E0D0">FAQ</a>
+                                <a href="${pathPrefix}knowledge-base.html" class="block px-4 py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Knowledge Base</a>
+                                <a href="${pathPrefix}blogs.html" class="block px-4 py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Blog</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Tools Dropdown -->
                     <div class="relative dropdown-container font-body">
-                        <button class="flex items-center dropdown-button" style="color: #40E0D0">
+                        <button class="flex items-center dropdown-button font-josefin" style="color: #40E0D0">
                             Tools
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -59,16 +59,16 @@ document.addEventListener('DOMContentLoaded', function() {
                         </button>
                         <div class="dropdown-menu absolute left-0 mt-2 w-48 rounded-lg shadow-xl hidden" style="background: rgba(30, 30, 30, 0.98);">
                             <div class="py-1">
-                                <a href="https://siko-ctrl.github.io/salvium-site/stats.html" class="block px-4 py-2 transition-all duration-200" style="color: #40E0D0">Stats</a>
-                                <a href="https://explorer.salvium.io/" class="block px-4 py-2 transition-all duration-200" style="color: #40E0D0">Explorer</a>
-                                <a href="https://siko-ctrl.github.io/salvium-site/tools.html" class="block px-4 py-2 transition-all duration-200" style="color: #40E0D0">3rd Party Tools</a>
+                                <a href="https://siko-ctrl.github.io/salvium-site/stats.html" class="block px-4 py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Stats</a>
+                                <a href="https://explorer.salvium.io/" class="block px-4 py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Explorer</a>
+                                <a href="https://siko-ctrl.github.io/salvium-site/tools.html" class="block px-4 py-2 transition-all duration-200 font-arial" style="color: #40E0D0">3rd Party Tools</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Get Involved Dropdown -->
                     <div class="relative dropdown-container font-body">
-                        <button class="flex items-center dropdown-button" style="color: #40E0D0">
+                        <button class="flex items-center dropdown-button font-josefin" style="color: #40E0D0">
                             Get Involved
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -76,10 +76,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         </button>
                         <div class="dropdown-menu absolute left-0 mt-2 w-48 rounded-lg shadow-xl hidden" style="background: rgba(30, 30, 30, 0.98);">
                             <div class="py-1">
-                                <a href="https://discord.gg/salvium" class="block px-4 py-2 transition-all duration-200" style="color: #40E0D0">Discord</a>
-                                <a href="https://github.com/salvium-io" class="block px-4 py-2 transition-all duration-200" style="color: #40E0D0">GitHub</a>
-                                <a href="https://twitter.com/salvium_io" class="block px-4 py-2 transition-all duration-200" style="color: #40E0D0">Twitter</a>
-                                <a href="https://t.me/salvium_io" class="block px-4 py-2 transition-all duration-200" style="color: #40E0D0">Telegram</a>
+                                <a href="https://discord.gg/salvium" class="block px-4 py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Discord</a>
+                                <a href="https://github.com/salvium-io" class="block px-4 py-2 transition-all duration-200 font-arial" style="color: #40E0D0">GitHub</a>
+                                <a href="https://twitter.com/salvium_io" class="block px-4 py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Twitter</a>
+                                <a href="https://t.me/salvium_io" class="block px-4 py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Telegram</a>
                             </div>
                         </div>
                     </div>
@@ -101,62 +101,62 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="px-4 py-3 space-y-3 max-h-[calc(100vh-4rem)] overflow-y-auto">
                 <!-- Get Started Section -->
                 <div class="mobile-dropdown">
-                    <button class="w-full flex justify-between items-center text-[#40E0D0] py-2 mobile-dropdown-button">
+                    <button class="w-full flex justify-between items-center text-[#40E0D0] py-2 mobile-dropdown-button font-josefin">
                         <span>Get Started</span>
                         <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <div class="mobile-dropdown-menu hidden pl-4 pb-2">
-                        <a href="${pathPrefix}exchanges.html" class="block py-2 transition-all duration-200" style="color: #40E0D0">Exchanges</a>
-                        <a href="${pathPrefix}about.html" class="block py-2 transition-all duration-200" style="color: #40E0D0">About</a>
-                        <a href="${pathPrefix}papers.html" class="block py-2 transition-all duration-200" style="color: #40E0D0">Lite Paper</a>
-                        <a href="${pathPrefix}download.html" class="block py-2 transition-all duration-200" style="color: #40E0D0">Downloads</a>
+                        <a href="${pathPrefix}exchanges.html" class="block py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Exchanges</a>
+                        <a href="${pathPrefix}about.html" class="block py-2 transition-all duration-200 font-arial" style="color: #40E0D0">About</a>
+                        <a href="${pathPrefix}papers.html" class="block py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Lite Paper</a>
+                        <a href="${pathPrefix}download.html" class="block py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Downloads</a>
                     </div>
                 </div>
 
                 <!-- Knowledge Section -->
                 <div class="mobile-dropdown">
-                    <button class="w-full flex justify-between items-center text-[#40E0D0] py-2 mobile-dropdown-button">
+                    <button class="w-full flex justify-between items-center text-[#40E0D0] py-2 mobile-dropdown-button font-josefin">
                         <span>Knowledge</span>
                         <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <div class="mobile-dropdown-menu hidden pl-4 pb-2">
-                        <a href="${pathPrefix}faq.html" class="block py-2 transition-all duration-200" style="color: #40E0D0">FAQ</a>
-                        <a href="${pathPrefix}knowledge-base.html" class="block py-2 transition-all duration-200" style="color: #40E0D0">Knowledge Base</a>
-                        <a href="${pathPrefix}blogs.html" class="block py-2 transition-all duration-200" style="color: #40E0D0">Blog</a>
+                        <a href="${pathPrefix}faq.html" class="block py-2 transition-all duration-200 font-arial" style="color: #40E0D0">FAQ</a>
+                        <a href="${pathPrefix}knowledge-base.html" class="block py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Knowledge Base</a>
+                        <a href="${pathPrefix}blogs.html" class="block py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Blog</a>
                     </div>
                 </div>
 
                 <!-- Tools Section -->
                 <div class="mobile-dropdown">
-                    <button class="w-full flex justify-between items-center text-[#40E0D0] py-2 mobile-dropdown-button">
+                    <button class="w-full flex justify-between items-center text-[#40E0D0] py-2 mobile-dropdown-button font-josefin">
                         <span>Tools</span>
                         <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <div class="mobile-dropdown-menu hidden pl-4 pb-2">
-                        <a href="https://siko-ctrl.github.io/salvium-site/stats.html" class="block py-2 transition-all duration-200" style="color: #40E0D0">Stats</a>
-                        <a href="https://explorer.salvium.io/" class="block py-2 transition-all duration-200" style="color: #40E0D0">Explorer</a>
+                        <a href="https://siko-ctrl.github.io/salvium-site/stats.html" class="block py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Stats</a>
+                        <a href="https://explorer.salvium.io/" class="block py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Explorer</a>
                     </div>
                 </div>
 
                 <!-- Get Involved Section -->
                 <div class="mobile-dropdown">
-                    <button class="w-full flex justify-between items-center text-[#40E0D0] py-2 mobile-dropdown-button">
+                    <button class="w-full flex justify-between items-center text-[#40E0D0] py-2 mobile-dropdown-button font-josefin">
                         <span>Get Involved</span>
                         <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <div class="mobile-dropdown-menu hidden pl-4 pb-2">
-                        <a href="https://discord.gg/salvium" class="block py-2 transition-all duration-200" style="color: #40E0D0">Discord</a>
-                        <a href="https://github.com/salvium-io" class="block py-2 transition-all duration-200" style="color: #40E0D0">GitHub</a>
-                        <a href="https://twitter.com/salvium_io" class="block py-2 transition-all duration-200" style="color: #40E0D0">Twitter</a>
-                        <a href="https://t.me/salvium_io" class="block py-2 transition-all duration-200" style="color: #40E0D0">Telegram</a>
+                        <a href="https://discord.gg/salvium" class="block py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Discord</a>
+                        <a href="https://github.com/salvium-io" class="block py-2 transition-all duration-200 font-arial" style="color: #40E0D0">GitHub</a>
+                        <a href="https://twitter.com/salvium_io" class="block py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Twitter</a>
+                        <a href="https://t.me/salvium_io" class="block py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Telegram</a>
                     </div>
                 </div>
             </div>

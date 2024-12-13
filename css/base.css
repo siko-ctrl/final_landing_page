@@ -1,13 +1,6 @@
 /* Base styles */
 :root {
-    --color-primary: #00bfa5;
-    --color-primary-dark: #009688;
-    --color-secondary: #4db6ac;
-    --color-accent: #80cbc4;
-    --color-background: #1e1e1e;
-    --color-text: #e0e0e0;
-    --color-code-bg: #242424;
-    --color-border: #2a2a2a;
+    /* Layout-specific variables */
     --header-height: 4rem;
     --container-padding: clamp(1rem, 5vw, 2rem);
     --section-spacing: clamp(2rem, 8vw, 6rem);
@@ -20,9 +13,9 @@ html {
 }
 
 body {
-    background-color: var(--color-background);
-    color: var(--color-text);
-    font-family: 'Inter', Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    font-family: var(--font-primary);
     line-height: 1.6;
     overflow-x: hidden;
     min-height: 100vh;
@@ -51,7 +44,7 @@ section {
 
 /* Gradient text */
 .gradient-text {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -59,8 +52,8 @@ section {
 
 /* Primary button */
 .btn-primary {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-    color: var(--color-background);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: var(--background);
     padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1.5rem, 4vw, 2rem);
     border-radius: 4px;
     font-weight: 500;
@@ -69,14 +62,14 @@ section {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Inter', Arial, sans-serif;
+    font-family: var(--font-primary);
     font-size: clamp(0.875rem, 1.5vw, 1rem);
     white-space: nowrap;
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 191, 165, 0.2);
+    box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.2);
 }
 
 /* Images */
@@ -99,7 +92,7 @@ img {
     left: 0;
     right: 0;
     height: 30%;
-    background: linear-gradient(to bottom, transparent, var(--color-background));
+    background: linear-gradient(to bottom, transparent, var(--background));
 }
 
 /* CTA Section */
@@ -132,7 +125,7 @@ img {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: var(--font-secondary);
     line-height: 1.2;
     margin-bottom: 0.5em;
 }
@@ -152,22 +145,22 @@ p {
 /* Secondary button */
 .btn-secondary {
     background: transparent;
-    color: var(--color-primary);
+    color: var(--primary);
     padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
     border-radius: 4px;
     font-weight: 600;
     transition: all 0.3s ease;
-    border: 1px solid var(--color-primary);
+    border: 1px solid var(--primary);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Inter', Arial, sans-serif;
+    font-family: var(--font-primary);
     font-size: clamp(0.875rem, 1.5vw, 1rem);
     white-space: nowrap;
 }
 
 .btn-secondary:hover {
-    background: rgba(0, 191, 165, 0.1);
+    background: rgba(var(--primary-rgb), 0.1);
     transform: translateY(-1px);
 }
 

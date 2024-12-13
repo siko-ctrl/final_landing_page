@@ -64,10 +64,20 @@
     transition: color 0.2s ease;
     display: inline-flex;
     align-items: center;
+    gap: 0.5rem;
+}
+
+.ecosystem-card .card-link i {
+    font-size: 1rem;
+    transition: transform 0.2s ease;
 }
 
 .ecosystem-card .card-link:hover {
     color: #00967d;
+}
+
+.ecosystem-card .card-link:hover i {
+    transform: translateY(2px);
 }
 
 /* Exchange Cards */
@@ -125,10 +135,20 @@
     transition: color 0.2s ease;
     display: inline-flex;
     align-items: center;
+    gap: 0.5rem;
+}
+
+.exchange-card .card-link i {
+    font-size: 1rem;
+    transition: transform 0.2s ease;
 }
 
 .exchange-card .card-link:hover {
     color: #00967d;
+}
+
+.exchange-card .card-link:hover i {
+    transform: translateY(2px);
 }
 
 /* Knowledge Base Cards */
@@ -182,10 +202,20 @@
     transition: color 0.2s ease;
     display: inline-flex;
     align-items: center;
+    gap: 0.5rem;
+}
+
+.kb-card .card-link i {
+    font-size: 1rem;
+    transition: transform 0.2s ease;
 }
 
 .kb-card .card-link:hover {
     color: #00967d;
+}
+
+.kb-card .card-link:hover i {
+    transform: translateY(2px);
 }
 
 /* Grid Layout */

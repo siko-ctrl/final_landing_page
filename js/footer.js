@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
                          alt="Salvium Logo" 
                          style="height: 80px; width: auto;" 
                          class="mb-6 mx-auto">
-                    <p class="text-white max-w-md mx-auto mb-6">Private blockchain with DeFi</p>
+                    <p class="text-white max-w-md mx-auto mb-6 font-arial">Private blockchain with DeFi</p>
                     <!-- Social Icons -->
                     <div class="flex justify-center space-x-6">
                         <a href="https://x.com/salvium_io" class="hover:opacity-80 transition-opacity">
@@ -33,26 +33,26 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 text-[#40E0D0]">Quick Links</h4>
+                    <h4 class="text-lg font-josefin font-semibold mb-4 text-[#40E0D0]">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="${basePath}about.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors">About Us</a></li>
-                        <li><a href="${basePath}blogs.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors">Blog</a></li>
-                        <li><a href="${basePath}faq.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors">FAQ</a></li>
-                        <li><a href="${basePath}exchanges.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors">Exchanges</a></li>
+                        <li><a href="${basePath}about.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors font-arial">About Us</a></li>
+                        <li><a href="${basePath}blogs.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors font-arial">Blog</a></li>
+                        <li><a href="${basePath}faq.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors font-arial">FAQ</a></li>
+                        <li><a href="${basePath}exchanges.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors font-arial">Exchanges</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 text-[#40E0D0]">Tools</h4>
+                    <h4 class="text-lg font-josefin font-semibold mb-4 text-[#40E0D0]">Tools</h4>
                     <ul class="space-y-2">
-                        <li><a href="${basePath}download.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors">Wallets</a></li>
-                        <li><a href="https://explorer.salvium.io/" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors">Explorer</a></li>
-                        <li><a href="https://siko-ctrl.github.io/salvium-site/stats.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors">Stats</a></li>
-                        <li><a href="https://siko-ctrl.github.io/salvium-site/tools.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors">3rd Party Tools</a></li>
+                        <li><a href="${basePath}download.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors font-arial">Wallets</a></li>
+                        <li><a href="https://explorer.salvium.io/" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors font-arial">Explorer</a></li>
+                        <li><a href="https://siko-ctrl.github.io/salvium-site/stats.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors font-arial">Stats</a></li>
+                        <li><a href="https://siko-ctrl.github.io/salvium-site/tools.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors font-arial">3rd Party Tools</a></li>
                     </ul>
                 </div>
             </div>
             <div class="text-center text-white text-sm">
-                <p>&copy; ${new Date().getFullYear()} Salvium Protocol. All rights reserved.</p>
+                <p class="font-arial">&copy; ${new Date().getFullYear()} Salvium Protocol. All rights reserved.</p>
             </div>
         </div>
     </footer>
