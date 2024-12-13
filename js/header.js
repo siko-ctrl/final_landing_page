@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <div class="py-1">
                                 <a href="${pathPrefix}stats.html" class="block px-4 py-2 transition-all duration-200" style="color: #40E0D0">Stats</a>
                                 <a href="https://explorer.salvium.io/" class="block px-4 py-2 transition-all duration-200" style="color: #40E0D0">Explorer</a>
+                                <a href="${pathPrefix}tools.html" class="block px-4 py-2 transition-all duration-200" style="color: #40E0D0">3rd Party Tools</a>
                             </div>
                         </div>
                     </div>
