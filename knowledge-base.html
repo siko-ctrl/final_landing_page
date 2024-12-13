@@ -168,80 +168,6 @@
                 width: 100%;
                 max-width: none;
             }
-            
-            .modal-content {
-                width: 95%;
-                margin: 1rem;
-                padding: 1.5rem;
-            }
-        }
-
-        .kb-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 1000;
-            background: rgba(30, 30, 30, 0.95);
-        }
-
-        .kb-modal.active {
-            display: block;
-        }
-
-        .kb-modal-content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            padding: 2rem;
-        }
-
-        .kb-modal-close {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            z-index: 1001;
-            background: none;
-            border: none;
-            color: #e0e0e0;
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: color 0.2s ease;
-        }
-
-        .kb-modal-close:hover {
-            color: #00bfa5;
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            background: #1e1e1e;
-        }
-
-        /* Global title styles */
-        h1, h2, h3, .title-font {
-            font-family: 'Josefin Sans', sans-serif;
-        }
-        
-        .kb-title {
-            font-family: 'Josefin Sans', sans-serif;
-            font-weight: 600;
-        }
-
-        .section-title {
-            font-family: 'Josefin Sans', sans-serif;
-            font-weight: 700;
-        }
-
-        .card-title {
-            font-family: 'Josefin Sans', sans-serif;
-            font-weight: 600;
         }
     </style>
 </head>
@@ -281,12 +207,12 @@
                         <span class="card-tag">Technical</span>
                         <h2 class="card-title">THE PROTOCOL</h2>
                         <ul class="space-y-2 mb-4">
-                            <li><a href="#" onclick="loadDocs('Protocol/overview'); return false;" class="text-white hover:text-[#40E0D0]">Overview</a></li>
-                            <li><a href="#" onclick="loadDocs('Protocol/consensus'); return false;" class="text-white hover:text-[#40E0D0]">Consensus</a></li>
-                            <li><a href="#" onclick="loadDocs('Protocol/privacy'); return false;" class="text-white hover:text-[#40E0D0]">About Privacy</a></li>
-                            <li><a href="#" onclick="loadDocs('Protocol/explorer'); return false;" class="text-white hover:text-[#40E0D0]">Explorer</a></li>
+                            <li><a href="https://siko-ctrl.github.io/docs-salvium/project/what-is-salvium/" target="_blank" class="text-white hover:text-[#40E0D0]">Overview</a></li>
+                            <li><a href="https://siko-ctrl.github.io/docs-salvium/protocol/consensus/" target="_blank" class="text-white hover:text-[#40E0D0]">Consensus</a></li>
+                            <li><a href="https://siko-ctrl.github.io/docs-salvium/protocol/privacy/" target="_blank" class="text-white hover:text-[#40E0D0]">Privacy</a></li>
+                            <li><a href="https://siko-ctrl.github.io/docs-salvium/tools/explorer/" target="_blank" class="text-white hover:text-[#40E0D0]">Explorer</a></li>
                         </ul>
-                        <a href="#" onclick="loadDocs('Protocol'); return false;" class="inline-flex items-center text-primary hover:text-primary-dark">
+                        <a href="https://siko-ctrl.github.io/docs-salvium/" target="_blank" class="inline-flex items-center text-primary hover:text-primary-dark">
                             View All Protocol Docs
                             <i class="fas fa-angle-down ml-2"></i>
                         </a>
@@ -300,12 +226,12 @@
                         <span class="card-tag">Project</span>
                         <h2 class="card-title">THE PROJECT</h2>
                         <ul class="space-y-2 mb-4">
-                            <li><a href="#" onclick="loadDocs('Project/tokenomics'); return false;" class="text-white hover:text-[#40E0D0]">Tokenomics</a></li>
-                            <li><a href="#" onclick="loadDocs('Project/governance'); return false;" class="text-white hover:text-[#40E0D0]">Governance</a></li>
-                            <li><a href="#" onclick="loadDocs('Project/audits'); return false;" class="text-white hover:text-[#40E0D0]">Audits</a></li>
-                            <li><a href="#" onclick="loadDocs('Project/compliance'); return false;" class="text-white hover:text-[#40E0D0]">Compliance</a></li>
+                            <li><a href="https://siko-ctrl.github.io/docs-salvium/project/tokenomics/" target="_blank" class="text-white hover:text-[#40E0D0]">Tokenomics</a></li>
+                            <li><a href="https://siko-ctrl.github.io/docs-salvium/project/governance/" target="_blank" class="text-white hover:text-[#40E0D0]">Governance</a></li>
+                            <li><a href="https://siko-ctrl.github.io/docs-salvium/project/audits/" target="_blank" class="text-white hover:text-[#40E0D0]">Audits</a></li>
+                            <li><a href="https://siko-ctrl.github.io/docs-salvium/project/roadmap/" target="_blank" class="text-white hover:text-[#40E0D0]">Roadmap</a></li>
                         </ul>
-                        <a href="#" onclick="loadDocs('Project'); return false;" class="inline-flex items-center text-primary hover:text-primary-dark">
+                        <a href="https://siko-ctrl.github.io/docs-salvium/project/" target="_blank" class="inline-flex items-center text-primary hover:text-primary-dark">
                             View All Project Docs
                             <i class="fas fa-angle-down ml-2"></i>
                         </a>
@@ -319,12 +245,12 @@
                         <span class="card-tag">Wallets</span>
                         <h2 class="card-title">WALLETS</h2>
                         <ul class="space-y-2 mb-4">
-                            <li><a href="#" onclick="loadDocs('Wallets/mobile-wallet'); return false;" class="text-white hover:text-[#40E0D0]">Mobile Wallet</a></li>
-                            <li><a href="#" onclick="loadDocs('Wallets/desktop-wallet'); return false;" class="text-white hover:text-[#40E0D0]">Desktop Wallet</a></li>
-                            <li><a href="#" onclick="loadDocs('Wallets/web-wallet'); return false;" class="text-white hover:text-[#40E0D0]">Web Wallet</a></li>
-                            <li><a href="#" onclick="loadDocs('Wallets/hardware-wallet'); return false;" class="text-white hover:text-[#40E0D0]">Hardware Wallet</a></li>
+                            <li><a href="https://siko-ctrl.github.io/docs-salvium/tools/wallets/" target="_blank" class="text-white hover:text-[#40E0D0]">Mobile Wallet</a></li>
+                            <li><a href="https://siko-ctrl.github.io/docs-salvium/tools/wallets/" target="_blank" class="text-white hover:text-[#40E0D0]">Desktop Wallet</a></li>
+                            <li><a href="https://siko-ctrl.github.io/docs-salvium/tools/wallets/" target="_blank" class="text-white hover:text-[#40E0D0]">Web Wallet</a></li>
+                            <li><a href="https://siko-ctrl.github.io/docs-salvium/tools/wallets/" target="_blank" class="text-white hover:text-[#40E0D0]">Hardware Wallet</a></li>
                         </ul>
-                        <a href="#" onclick="loadDocs('Wallets'); return false;" class="inline-flex items-center text-primary hover:text-primary-dark">
+                        <a href="https://siko-ctrl.github.io/docs-salvium/tools/wallets/" target="_blank" class="inline-flex items-center text-primary hover:text-primary-dark">
                             View All Wallet Docs
                             <i class="fas fa-angle-down ml-2"></i>
                         </a>
@@ -354,14 +280,6 @@
     </div>
 </section>
     <div id="footer" class="mt-0"></div>
-    <div id="kb-modal" class="kb-modal">
-        <button class="kb-modal-close" onclick="closeModal()">
-            <i class="fas fa-times"></i>
-        </button>
-        <div class="kb-modal-content">
-            <iframe id="kb-content" src="" onerror="this.src='salbase/site/404.html'"></iframe>
-        </div>
-    </div>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -369,38 +287,9 @@
     <script src="js/header.js"></script>
     <script src="js/footer.js?v=1"></script>
     <script>
-        // Initialize AOS
         AOS.init({
             duration: 800,
             once: true
-        });
-
-        // Knowledge Base Functions
-        function loadDocs(section) {
-            const modal = document.getElementById('kb-modal');
-            const iframe = document.getElementById('kb-content');
-            
-            iframe.src = `salbase/site/${section}/index.html`;
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('kb-modal');
-            modal.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        // Handle iframe load errors
-        document.getElementById('kb-content').onerror = function() {
-            this.src = 'salbase/site/404.html';
-        };
-
-        // Close modal on escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeModal();
-            }
         });
     </script>
 </body>
