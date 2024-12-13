@@ -435,9 +435,72 @@
                 font-size: 1rem;
             }
         }
+        
+        /* Loading Screen Styles */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1e1e1e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .loading-screen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .privacy-loader {
+            position: relative;
+            text-align: center;
+        }
+
+        .logo-container {
+            margin-bottom: 30px;
+        }
+
+        .logo-container img {
+            width: 80px;
+            height: 80px;
+            opacity: 0.9;
+        }
+
+        .privacy-text {
+            font-family: monospace;
+            color: var(--color-primary);
+            font-size: 16px;
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            left: 0;
+            animation: textFade 3s infinite;
+        }
+
+        @keyframes textFade {
+            0%, 100% { opacity: 0; transform: translateY(10px); }
+            20%, 80% { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body class="bg-[#1e1e1e]">
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="privacy-loader">
+            <div class="logo-container">
+                <img src="images/salvium_coin_circle_white_solid.svg" alt="Salvium">
+            </div>
+            <div id="privacy-text-container">
+                <!-- Privacy text will be added here by JavaScript -->
+            </div>
+        </div>
+    </div>
     <!-- Particles Container -->
     <div id="particles" class="fixed inset-0 pointer-events-none z-0"></div>
     
@@ -630,6 +693,18 @@
     <div id="footer"></div>
 
     <!-- Scripts -->
+    <script>
+        // Loading screen handler
+        window.addEventListener('load', function() {
+            const loadingScreen = document.querySelector('.loading-screen');
+            setTimeout(() => {
+                loadingScreen.classList.add('fade-out');
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/header.js"></script>
@@ -639,6 +714,149 @@
             duration: 800,
             once: true
         });
+    </script>
+    <script>
+        // Generate dynamic loading elements
+        const cryptoLoader = document.querySelector('.crypto-loader');
+        
+        // Create multiple particle rings
+        for (let ring = 0; ring < 3; ring++) {
+            const particleRing = document.createElement('div');
+            particleRing.classList.add('particle-ring');
+            particleRing.style.transform = `rotateX(${ring * 30}deg) rotateY(${ring * 45}deg)`;
+            
+            // Add particles to each ring
+            for (let i = 0; i < 12; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                const angle = (i / 12) * Math.PI * 2;
+                const radius = 120 + ring * 40;
+                particle.style.left = `${50 + Math.cos(angle) * radius}px`;
+                particle.style.top = `${50 + Math.sin(angle) * radius}px`;
+                particle.style.animation = `particlePulse 2s ease-in-out infinite ${i * 0.1}s`;
+                particleRing.appendChild(particle);
+            }
+            
+            cryptoLoader.appendChild(particleRing);
+        }
+
+        // Create cyber circles
+        for (let i = 0; i < 3; i++) {
+            const circle = document.createElement('div');
+            circle.classList.add('cyber-circle');
+            circle.style.width = `${200 + i * 60}px`;
+            circle.style.height = `${200 + i * 60}px`;
+            circle.style.left = `${50 - (100 + i * 30)}px`;
+            circle.style.top = `${50 - (100 + i * 30)}px`;
+            circle.style.animation = `rotateCircle ${6 + i * 2}s linear infinite ${i * 0.5}s`;
+            cryptoLoader.appendChild(circle);
+        }
+
+        // Create scanning lines
+        for (let i = 0; i < 5; i++) {
+            const line = document.createElement('div');
+            line.classList.add('cyber-line');
+            line.style.top = `${20 + i * 15}%`;
+            line.style.animation = `scanline 3s linear infinite ${i * 0.4}s`;
+            cryptoLoader.appendChild(line);
+        }
+    </script>
+    <script>
+        // Privacy-focused loading text
+        const privacyTerms = [
+            'Encrypting Data...',
+            'Securing Transaction...',
+            'Anonymizing...',
+            'Private Send...',
+            'Zero Knowledge...',
+            'Ring Signature...',
+            'Stealth Address...',
+            'Privacy Protocol...',
+            'Confidential TX...',
+            'Shielded Pool...'
+        ];
+
+        const textContainer = document.getElementById('privacy-text-container');
+        let currentIndex = 0;
+
+        function showNextTerm() {
+            const textElement = document.createElement('div');
+            textElement.classList.add('privacy-text');
+            textElement.textContent = privacyTerms[currentIndex];
+            
+            // Remove previous text after animation
+            const previousText = textContainer.querySelector('.privacy-text');
+            if (previousText) {
+                previousText.addEventListener('animationend', () => {
+                    previousText.remove();
+                });
+            }
+            
+            textContainer.appendChild(textElement);
+            currentIndex = (currentIndex + 1) % privacyTerms.length;
+        }
+
+        // Show first term immediately
+        showNextTerm();
+        // Change term every 3 seconds
+        setInterval(showNextTerm, 3000);
+
+        // Handle loading screen removal
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.querySelector('.loading-screen').classList.add('fade-out');
+            }, 1000);
+        });
+    </script>
+    <script>
+        // Generate dynamic loading elements
+        const privacyLoader = document.querySelector('.privacy-loader');
+        
+        // Privacy-related terms for the animation
+        const privacyTerms = [
+            'Encrypting Data...',
+            'Securing Transaction...',
+            'Anonymizing...',
+            'Private Send...',
+            'Zero Knowledge...',
+            'Ring Signature...',
+            'Stealth Address...',
+            'Privacy Protocol...',
+            'Confidential TX...',
+            'Shielded Pool...'
+        ];
+        
+        // Create multiple encryption rings
+        for (let ring = 0; ring < 3; ring++) {
+            const encryptionRing = document.createElement('div');
+            encryptionRing.classList.add('encryption-ring');
+            encryptionRing.style.transform = `rotateX(${ring * 30}deg) rotateY(${ring * 45}deg)`;
+            
+            // Add encryption text to each ring
+            for (let i = 0; i < 12; i++) {
+                const encryptionText = document.createElement('div');
+                encryptionText.classList.add('encryption-text');
+                const angle = (i / 12) * Math.PI * 2;
+                const radius = 120 + ring * 40;
+                encryptionText.style.left = `${50 + Math.cos(angle) * radius}px`;
+                encryptionText.style.top = `${50 + Math.sin(angle) * radius}px`;
+                encryptionText.style.animation = `textEncrypt 3s ease-out infinite ${i * 0.1}s`;
+                encryptionText.textContent = privacyTerms[Math.floor(Math.random() * privacyTerms.length)];
+                encryptionRing.appendChild(encryptionText);
+            }
+            
+            privacyLoader.appendChild(encryptionRing);
+        }
+
+        // Create data streams
+        for (let i = 0; i < 8; i++) {
+            const dataStream = document.createElement('div');
+            dataStream.classList.add('data-stream');
+            const randomLeft = Math.random() * 80 + 10; // Random position between 10% and 90%
+            dataStream.style.left = `${randomLeft}%`;
+            dataStream.style.animation = `dataStream 2s linear infinite ${i * 0.3}s`;
+            privacyLoader.appendChild(dataStream);
+        }
     </script>
 </body>
 </html>
