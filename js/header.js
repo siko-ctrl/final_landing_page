@@ -59,9 +59,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         </button>
                         <div class="dropdown-menu absolute left-0 mt-2 w-48 rounded-lg shadow-xl hidden" style="background: rgba(30, 30, 30, 0.98);">
                             <div class="py-1">
-                                <a href="${pathPrefix}stats.html" class="block px-4 py-2 transition-all duration-200" style="color: #40E0D0">Stats</a>
+                                <a href="https://siko-ctrl.github.io/salvium-site/stats.html" class="block px-4 py-2 transition-all duration-200" style="color: #40E0D0">Stats</a>
                                 <a href="https://explorer.salvium.io/" class="block px-4 py-2 transition-all duration-200" style="color: #40E0D0">Explorer</a>
-                                <a href="${pathPrefix}tools.html" class="block px-4 py-2 transition-all duration-200" style="color: #40E0D0">3rd Party Tools</a>
+                                <a href="https://siko-ctrl.github.io/salvium-site/tools.html" class="block px-4 py-2 transition-all duration-200" style="color: #40E0D0">3rd Party Tools</a>
                             </div>
                         </div>
                     </div>
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </svg>
                     </button>
                     <div class="mobile-dropdown-menu hidden pl-4 pb-2">
-                        <a href="${pathPrefix}stats.html" class="block py-2 transition-all duration-200" style="color: #40E0D0">Stats</a>
+                        <a href="https://siko-ctrl.github.io/salvium-site/stats.html" class="block py-2 transition-all duration-200" style="color: #40E0D0">Stats</a>
                         <a href="https://explorer.salvium.io/" class="block py-2 transition-all duration-200" style="color: #40E0D0">Explorer</a>
                     </div>
                 </div>

@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <ul class="space-y-2">
                         <li><a href="${basePath}download.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors">Wallets</a></li>
                         <li><a href="https://explorer.salvium.io/" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors">Explorer</a></li>
-                        <li><a href="${basePath}stats.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors">Stats</a></li>
-                        <li><a href="${basePath}tools.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors">3rd Party Tools</a></li>
+                        <li><a href="https://siko-ctrl.github.io/salvium-site/stats.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors">Stats</a></li>
+                        <li><a href="https://siko-ctrl.github.io/salvium-site/tools.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors">3rd Party Tools</a></li>
                     </ul>
                 </div>
             </div>
