@@ -11,6 +11,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/design-system.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/blog.css">
     
     <style>
         :root {
@@ -28,149 +29,32 @@
             color: var(--color-text);
             line-height: 1.6;
         }
-
-        .blog-header {
-            position: relative;
-            height: 60vh;
-            min-height: 400px;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .blog-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(30, 30, 30, 0.5);
-        }
-
-        .blog-title-container {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .blog-title-container h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 1rem;
-        }
-
-        .blog-meta {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 1.1rem;
-        }
-
-        .blog-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .blog-content h2 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: var(--color-primary);
-            margin: 2rem 0 1rem;
-        }
-
-        .blog-content p {
-            margin-bottom: 1.5rem;
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 1.1rem;
-        }
-
-        .blog-content a {
-            color: var(--color-primary);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .blog-content a:hover {
-            color: var(--color-primary-dark);
-        }
-
-        .blog-content ul, .blog-content ol {
-            margin-bottom: 1.5rem;
-            padding-left: 2rem;
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .blog-content li {
-            margin-bottom: 0.5rem;
-        }
-
-        .blog-content blockquote {
-            border-left: 4px solid var(--color-primary);
-            padding-left: 1rem;
-            margin: 1.5rem 0;
-            font-style: italic;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .back-to-blog {
-            display: inline-block;
-            margin: 2rem 0;
-            color: var(--color-primary);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .back-to-blog:hover {
-            color: var(--color-primary-dark);
-        }
-
-        @media (max-width: 768px) {
-            .blog-header {
-                height: 40vh;
-            }
-
-            .blog-title-container h1 {
-                font-size: 2rem;
-            }
-
-            .blog-meta {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-        }
     </style>
 </head>
 <body>
     <!-- Header will be injected here -->
     <div id="header"></div>
 
-    <!-- Blog Header -->
-    <header class="blog-header" style="background-image: url('{{ site.baseurl }}{{ page.image }}');">
-        <div class="blog-title-container">
-            <h1>{{ page.title }}</h1>
-            <div class="blog-meta">
-                <span>{{ page.date | date: "%B %d, %Y" }}</span>
-                <span>{{ page.read_time }} min read</span>
-            </div>
-        </div>
-    </header>
-
     <!-- Blog Content -->
-    <main class="blog-content">
-        <a href="{{ site.baseurl }}/blogs" class="back-to-blog">← Back to Blog</a>
-        {{ content }}
-        <a href="{{ site.baseurl }}/blogs" class="back-to-blog">← Back to Blog</a>
-    </main>
+    <div class="blog-container">
+        <!-- Main Content -->
+        <div class="blog-content">
+            <!-- Blog Header -->
+            <header class="blog-header" style="background-image: url('{{ site.baseurl }}{{ page.image }}');">
+                <div class="blog-title-container">
+                    <h1>{{ page.title }}</h1>
+                    <div class="blog-meta">
+                        <span>{{ page.date | date: "%B %d, %Y" }}</span>
+                        <span>{{ page.read_time }} min read</span>
+                    </div>
+                </div>
+            </header>
+            {{ content }}
+        </div>
+
+        <!-- Category Navigation -->
+        {% include blog-categories.html %}
+    </div>
 
     <!-- Footer will be injected here -->
     <div id="footer"></div>
@@ -178,7 +62,10 @@
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            duration: 800,
+            once: true
+        });
     </script>
     <script src="{{ site.baseurl }}/js/header_jekyll.js"></script>
     <script src="{{ site.baseurl }}/js/footer_jekyll.js"></script>

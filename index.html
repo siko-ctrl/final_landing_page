@@ -780,20 +780,18 @@
         let currentIndex = 0;
 
         function showNextTerm() {
+            // Remove all existing text elements first
+            const existingTexts = textContainer.querySelectorAll('.privacy-text');
+            existingTexts.forEach(text => text.remove());
+
+            // Create and add new text element
             const textElement = document.createElement('div');
             textElement.classList.add('privacy-text');
             textElement.textContent = privacyTerms[currentIndex];
             
-            // Remove previous text after animation
-            const previousText = textContainer.querySelector('.privacy-text');
-            if (previousText) {
-                previousText.addEventListener('animationend', () => {
-                    previousText.remove();
-                });
-            }
-            
-            textContainer.appendChild(textElement);
+            // Update index for next term
             currentIndex = (currentIndex + 1) % privacyTerms.length;
+            textContainer.appendChild(textElement);
         }
 
         // Show first term immediately

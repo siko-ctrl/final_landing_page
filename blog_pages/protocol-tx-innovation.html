@@ -11,6 +11,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/design-system.css">
+    <link rel="stylesheet" href="../css/blog.css">
     
     <style>
         :root {
@@ -28,197 +29,105 @@
             color: var(--color-text);
             line-height: 1.6;
         }
-
-        .blog-header {
-            position: relative;
-            height: 60vh;
-            min-height: 400px;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .blog-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(30, 30, 30, 0.5);
-        }
-
-        .blog-title-container {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .blog-title-container h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 1rem;
-        }
-
-        .blog-meta {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 1.1rem;
-        }
-
-        .blog-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .blog-content h2 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: var(--color-primary);
-            margin: 2rem 0 1rem;
-        }
-
-        .blog-content p {
-            margin-bottom: 1.5rem;
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 1.1rem;
-        }
-
-        .blog-content a {
-            color: var(--color-primary);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .blog-content a:hover {
-            color: var(--color-primary-dark);
-        }
-
-        .blog-content ul, .blog-content ol {
-            margin: 1.5rem 0;
-            padding-left: 2rem;
-        }
-
-        .blog-content li {
-            margin-bottom: 0.5rem;
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .blog-content blockquote {
-            border-left: 4px solid var(--color-primary);
-            padding-left: 1.5rem;
-            margin: 1.5rem 0;
-            font-style: italic;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        @media (max-width: 768px) {
-            .blog-header {
-                height: 40vh;
-            }
-
-            .blog-title-container h1 {
-                font-size: 2rem;
-            }
-
-            .blog-content {
-                padding: 1rem;
-            }
-        }
     </style>
 </head>
 <body>
     <!-- Header will be injected here -->
     <div id="header"></div>
 
-    <!-- Blog Header -->
-    <header class="blog-header" style="background-image: url('../images/newimages/Blog Page/Blog Thumbs - No Text/Blog - No Text.jpg'), url('./images/newimages/Blog Page/Blog Thumbs - No Text/Blog - No Text.jpg');">
-        <div class="blog-title-container" data-aos="fade-up">
-            <h1>Protocol_tx - The Innovation Powering Salvium's Blockchain Future</h1>
-            <div class="blog-meta">
-                <span class="date">January 1, 2024</span>
-                <span class="read-time">5 min read</span>
-            </div>
-        </div>
-    </header>
-
     <!-- Blog Content -->
-    <article class="blog-content">
-        <h2>Protocol TX: The Innovation Powering Salvium's Blockchain Future</h2>
-        
-        <p>In the rapidly evolving landscape of cryptocurrency and blockchain technology, true innovation is a rare gem. Today, we're excited to dive deep into one such innovation that sets Salvium apart from the crowd: Protocol_tx. This isn't just another incremental improvement; it's a fundamental reimagining of how blockchain transactions can work, opening doors to possibilities that were once thought impossible in the realm of privacy-focused cryptocurrencies.</p>
+    <div class="blog-container">
+        <!-- Main Content -->
+        <div class="blog-content">
+            <!-- Blog Header -->
+            <header class="blog-header" style="background-image: url('../images/newimages/Blog Page/Blog Thumbs - No Text/Blog - No Text.jpg');">
+                <div class="blog-title-container" data-aos="fade-up">
+                    <h1>Protocol_tx - The Innovation Powering Salvium's Blockchain Future</h1>
+                    <div class="blog-meta">
+                        <span>January 1, 2024</span>
+                        <span>5 min read</span>
+                    </div>
+                </div>
+            </header>
 
-        <h2>Understanding Protocol_tx: The Backbone of Salvium's Innovation</h2>
-        <p>At its core, Protocol_tx is a specialized block-level transaction unique to the Salvium blockchain. But to call it just a "transaction" would be an understatement. Think of Protocol_tx as the Swiss Army knife of blockchain operations – a versatile, powerful tool that handles a wide array of critical functions.</p>
+            <!-- Original content here -->
+            <h2>Protocol TX: The Innovation Powering Salvium's Blockchain Future</h2>
+            
+            <p>In the rapidly evolving landscape of cryptocurrency and blockchain technology, true innovation is a rare gem. Today, we're excited to dive deep into one such innovation that sets Salvium apart from the crowd: Protocol_tx. This isn't just another incremental improvement; it's a fundamental reimagining of how blockchain transactions can work, opening doors to possibilities that were once thought impossible in the realm of privacy-focused cryptocurrencies.</p>
 
-        <h2>The Technical Marvel Behind Protocol_tx</h2>
-        <p>Let's delve into the technical aspects that make Protocol_tx a game-changer:</p>
-        <ul>
-            <li>Revolutionary transaction processing</li>
-            <li>Enhanced scalability</li>
-            <li>Improved efficiency</li>
-        </ul>
+            <h2>Understanding Protocol_tx: The Backbone of Salvium's Innovation</h2>
+            <p>At its core, Protocol_tx is a specialized block-level transaction unique to the Salvium blockchain. But to call it just a "transaction" would be an understatement. Think of Protocol_tx as the Swiss Army knife of blockchain operations – a versatile, powerful tool that handles a wide array of critical functions.</p>
 
-        <h2>Smart Contract Capabilities</h2>
-        <ul>
-            <li>Privacy-preserving smart contracts</li>
-            <li>Automated compliance features</li>
-            <li>Extensible platform for developers</li>
-        </ul>
+            <h2>The Technical Marvel Behind Protocol_tx</h2>
+            <p>Let's delve into the technical aspects that make Protocol_tx a game-changer:</p>
+            <ul>
+                <li>Revolutionary transaction processing</li>
+                <li>Enhanced scalability</li>
+                <li>Improved efficiency</li>
+            </ul>
 
-        <h2>Network Security</h2>
-        <ul>
-            <li>Multi-layered security architecture</li>
-            <li>Advanced threat detection</li>
-            <li>Robust consensus mechanism</li>
-        </ul>
+            <h2>Smart Contract Capabilities</h2>
+            <ul>
+                <li>Privacy-preserving smart contracts</li>
+                <li>Automated compliance features</li>
+                <li>Extensible platform for developers</li>
+            </ul>
 
-        <h2>The Impact on Privacy and Security</h2>
-        <p>Protocol_tx doesn't just improve functionality; it strengthens privacy and security:</p>
-        <ul>
-            <li>Enhanced Privacy: By implementing advanced cryptographic techniques at the protocol level</li>
-            <li>Improved Security: Through multiple layers of validation and verification</li>
-            <li>Reduced Attack Surface: By minimizing the attack vectors available to potential threats</li>
-        </ul>
+            <h2>Network Security</h2>
+            <ul>
+                <li>Multi-layered security architecture</li>
+                <li>Advanced threat detection</li>
+                <li>Robust consensus mechanism</li>
+            </ul>
 
-        <h2>Looking to the Future</h2>
-        <p>Protocol_tx is more than just a technical innovation; it's a foundation for future development. Its flexible architecture allows for:</p>
-        <ol>
-            <li>Easy integration of new privacy features</li>
-            <li>Seamless upgrade paths for future improvements</li>
-            <li>Compatibility with emerging blockchain standards</li>
-        </ol>
+            <h2>The Impact on Privacy and Security</h2>
+            <p>Protocol_tx doesn't just improve functionality; it strengthens privacy and security:</p>
+            <ul>
+                <li>Enhanced Privacy: By implementing advanced cryptographic techniques at the protocol level</li>
+                <li>Improved Security: Through multiple layers of validation and verification</li>
+                <li>Reduced Attack Surface: By minimizing the attack vectors available to potential threats</li>
+            </ul>
 
-        <h2>Conclusion</h2>
-        <p>Protocol_tx represents a significant leap forward in blockchain technology, particularly in the privacy-focused sector. It's not just about improving what exists; it's about reimagining what's possible. As we continue to develop and refine this technology, we remain committed to our vision of a more private, more functional, and more accessible cryptocurrency ecosystem.</p>
+            <h2>Looking to the Future</h2>
+            <p>Protocol_tx is more than just a technical innovation; it's a foundation for future development. Its flexible architecture allows for:</p>
+            <ol>
+                <li>Easy integration of new privacy features</li>
+                <li>Seamless upgrade paths for future improvements</li>
+                <li>Compatibility with emerging blockchain standards</li>
+            </ol>
 
-        <p>The Protocol_tx innovation is more than just a technical advancement; it's a paradigm shift in how we think about privacy and functionality in blockchain technology. As we continue to develop and refine this technology, we remain committed to our vision of a more private, more functional, and more accessible cryptocurrency ecosystem.</p>
-    </article>
+            <h2>Conclusion</h2>
+            <p>Protocol_tx represents a significant leap forward in blockchain technology, particularly in the privacy-focused sector. It's not just about improving what exists; it's about reimagining what's possible. As we continue to develop and refine this technology, we remain committed to our vision of a more private, more functional, and more accessible cryptocurrency ecosystem.</p>
+
+            <p>The Protocol_tx innovation is more than just a technical advancement; it's a paradigm shift in how we think about privacy and functionality in blockchain technology. As we continue to develop and refine this technology, we remain committed to our vision of a more private, more functional, and more accessible cryptocurrency ecosystem.</p>
+        </div>
+
+        <!-- Sidebar Navigation -->
+        <div class="blog-sidebar">
+            <h3 class="text-xl font-semibold mb-4 text-white">Categories</h3>
+            <nav>
+                <a href="new-market-dawn.html" class="category-link">Market Analysis</a>
+                <a href="privacy-evolution.html" class="category-link">Privacy</a>
+                <a href="v06-difficulty-algorithm.html" class="category-link">Technology</a>
+                <a href="protocol-tx-innovation.html" class="category-link active">Protocol</a>
+                <a href="protocol-audit.html" class="category-link">Security</a>
+                <a href="treasury-update.html" class="category-link">Treasury</a>
+            </nav>
+        </div>
+    </div>
 
     <!-- Footer will be injected here -->
     <div id="footer"></div>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/footer.js"></script>
     <script>
         AOS.init({
             duration: 800,
-            offset: 100,
             once: true
         });
     </script>
-    <script src="../js/header.js"></script>
-    <script src="../js/footer.js"></script>
-    <script src="../js/blog-navigation.js"></script>
 </body>
 </html>
