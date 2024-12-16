@@ -1,8 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Get the current path
+    // Get the current path and base URL
     const currentPath = window.location.pathname;
-    const isInSubdirectory = currentPath.split('/').length > 2;
-    const basePath = isInSubdirectory ? '../' : './';
+    const isGitHubPages = window.location.hostname.includes('github.io');
+    const baseUrl = isGitHubPages ? 'https://siko-ctrl.github.io/final_landing_page-main' : '';
+    const repoName = isGitHubPages ? '/final_landing_page-main' : '';
+    const basePath = isGitHubPages ? '' : './';
+    const isInSubdirectory = !currentPath.includes('final_landing_page-main');
     const imagePath = isInSubdirectory ? '../images/' : './images/';
     
     const footerHtml = `
@@ -35,16 +38,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div>
                     <h4 class="text-lg font-josefin font-semibold mb-4 text-[#40E0D0]">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="${basePath}about.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors font-arial">About Us</a></li>
-                        <li><a href="${basePath}blogs.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors font-arial">Blog</a></li>
-                        <li><a href="${basePath}faq.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors font-arial">FAQ</a></li>
-                        <li><a href="${basePath}exchanges.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors font-arial">Exchanges</a></li>
+                        <li><a href="${baseUrl}${basePath}about.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors font-arial">About Us</a></li>
+                        <li><a href="${baseUrl}${basePath}blog.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors font-arial">Blog</a></li>
+                        <li><a href="${baseUrl}${basePath}faq.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors font-arial">FAQ</a></li>
+                        <li><a href="${baseUrl}${basePath}exchanges.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors font-arial">Exchanges</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-lg font-josefin font-semibold mb-4 text-[#40E0D0]">Tools</h4>
                     <ul class="space-y-2">
-                        <li><a href="${basePath}download.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors font-arial">Wallets</a></li>
+                        <li><a href="${baseUrl}${basePath}download.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors font-arial">Wallets</a></li>
                         <li><a href="https://explorer.salvium.io/" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors font-arial">Explorer</a></li>
                         <li><a href="https://siko-ctrl.github.io/salvium-site/stats.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors font-arial">Stats</a></li>
                         <li><a href="https://siko-ctrl.github.io/salvium-site/tools.html" style="color: #40E0D0 !important;" class="hover:text-[#40E0D0]/80 transition-colors font-arial">3rd Party Tools</a></li>
